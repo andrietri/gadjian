@@ -3,4 +3,5 @@
 
     $chess = new Chess();
     $input = $chess->start();
+    $result = $chess->process($input);
 ?>
