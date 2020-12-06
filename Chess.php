@@ -72,6 +72,13 @@ class Chess
             return $data;
         }
     }
+
+    function result($result)
+    {
+        echo "(";
+        echo implode("), (",$result);
+        echo ")";
+    }
 }
 
 ?>
