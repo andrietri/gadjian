@@ -38,6 +38,40 @@ class Chess
 
         return $arrayNumber;
     }
+
+    function process($input){
+        $temporary = "";
+        $temporaryInput = "";
+
+        for($k = 0; $k < count($input); $k++){
+            if($input[$k] !== $temporary){
+                $dataPossibility = $this->dataPossibility($input[$k]);
+
+                for($l = 0; $l < count($dataPossibility); $l++){
+                    for($h = 0; $h < count($input); $h++){
+                        if($dataPossibility[$l] == $input[$h]){
+                            if($input[$k]!=$temporaryInput){
+                                $data[] = $input[$k];
+                            }
+
+                            $temporary = $dataPossibility[$l];
+                            $temporaryInput = $input[$k];
+                        }
+                    }
+                }
+            }
+        }
+
+        if(!empty($data)){
+            $data = $data;
+            
+            return $data;
+        }else{
+            $data = [];
+
+            return $data;
+        }
+    }
 }
 
 ?>
