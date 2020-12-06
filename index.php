@@ -7,7 +7,7 @@
 
     echo "hasil\n";
     if(!empty($result)){
-        $a->result($result);
+        $chess->result($result);
     }else{
         echo "tidak ditemukan\n";
     }
